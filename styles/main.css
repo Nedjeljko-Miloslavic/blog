@@ -1,0 +1,141 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:Arial;
+}
+body{
+	background:rgb(220,220,220);
+}
+
+header{
+	display:flex;
+	height:60px;
+	background:rgb(200,200,200);
+	align-items:center;
+}
+.blog{
+	width:33%;
+	padding-left:60px;
+	font-size:25px;
+	font-weight:600;
+}
+.username{
+	width:33%;
+	text-align:center;
+	font-size:19px;
+}
+.login{
+	width:33%;
+	text-align:right;
+}
+.login a{
+	background:rgb(170,170,170);
+	display:inline;
+	padding:10px;
+	border-radius:10px;
+	margin-right:70px;
+	cursor:pointer;
+	color:black;
+	text-decoration:none;
+}
+
+
+.main{
+	padding-top:70px;
+	display:flex;
+	
+}
+.postContainer{
+	width:100%;	
+	margin-bottom:20px;
+}
+.postContainer h1{
+	text-align:center;
+}
+.postContainer .post{
+	width:80%;
+	background:#333;
+	margin:auto;
+	color:white;
+	border-radius:20px;
+	box-shadow:0 0 5px 1px black;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-top:30px;
+	padding-bottom:20px;
+}
+.postContainer h2{
+	margin-top:20px;
+}
+.postContainer .content{
+	padding:30px;
+	text-align:justify;
+}
+.postContainer .interactions{
+	margin-top:20px;
+	width:100%;
+}
+.postContainer .interactions a{
+	text-decoration:none;
+	margin-left:40px;
+	padding:5px 10px;
+	background:rgb(220,220,220);
+	color:black;
+	border-radius:10px;
+}
+.postContainer .interactions span{
+	margin-left:10px;
+}
+
+
+
+
+
+.newPost{
+	width:30%;
+}
+.newPost h2{
+	text-align:center;
+	margin-bottom:20px;
+}
+.newPost button{
+	display:inline-block;
+	padding:5px 10px;
+	border-radius:10px;
+	font-size:18px;
+	border:0;
+	margin-top:20px;
+	cursor:pointer;
+}
+
+
+form{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:250px;
+	padding:15px;
+	background:rgb(190,190,190);
+	border-radius:10px;
+	box-shadow:0 0 5px 1px gray;
+}
+input{
+	padding:9px 15px;
+	border:0;
+	border-radius:10px;
+	margin:10px 0;
+	width:100%;
+	font-size:17px;
+	box-shadow:1px 1px 3px 1px gray;
+}
+textarea{
+	height:200px;
+	width:100%;
+	border-radius:10px;
+	padding:10px;
+}
+label{
+	margin-top:15px;
+}
