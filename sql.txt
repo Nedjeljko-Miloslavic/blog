@@ -1,47 +1,4 @@
-create table posts (
-	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
-	subject varchar(128) not null,
-	content varchar(1000) not null,
-	date datetime not null
-);
-
-drop table posts;
-
-insert into posts (subject,content,date) VALUES ('This is the subject', 'lorem ipsum lorem ipsum jskdjsdjk jksd kjs sjk j', '2015-11-14 16:38:01');
-
-select subject from posts
-select * from posts
-select * from posts where id="1"
-select * from posts where id="1" AND subject="This is the subject"
-
-update posts 
-set subject="this is a test", content="this is the content"
-WHERE id="1"
-
-DELETE FROM posts
-WHERE id="1"
-
-
-select * from posts order by id asc
-
-
-create table employee (
-	emp_id int primary key,
-	branch_id int
-);
-
-create table branch (
-	branch_id int primary key,
-	mgr_id int,
-	branch_name varchar(40),
-	foreign key(mgr_id) references employee(emp_id) on delete set null
-);
-
-alter table employee
-add foregin key(branch_id)
-references branch(branch_id)
-on delete set null;
-
+treba kreirati bazu podataka po nazivu "blogs" i potom copy paste ostatak coda u SQL
 
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -61,8 +18,7 @@ CREATE TABLE posts (
 	likes INT,
 	timestamp INT,
 	username VARCHAR(300),
-	FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL,
-	FOREIGN KEY(username) REFERENCES users(username) ON DELETE SET NULL
+	FOREIGN KEY(user_id) REFERENCES users(user_id) ON DELETE SET NULL
 );
 
 CREATE TABLE likes (

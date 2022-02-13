@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
 	$email = $_POST["email"];
 	
 	
-	//instantiation signupcontr class_alias
+	//uvozimo classove
 	
 	include "../classes/dbh.classes.php";
 	include "../classes/signup.classes.php";
@@ -17,9 +17,9 @@ if(isset($_POST["submit"])){
 	
 	$signup = new SignupContr($uid,$pwd,$pwdrepeat,$email);
 	
-	//running error handlers and user signupcontr
+	//ovdje se provjeravaju greške. Ako je sve u redu provodi se signup novog usera
 	$signup->signUpUser();
 	
-	//going back to front page
+	//vraćamo se na index.php
 	header("location: ../index.php?error=none");
 }

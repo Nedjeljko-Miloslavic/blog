@@ -14,6 +14,8 @@ class NewpostContr extends Newpost{
 		$this->username = $_SESSION["user"]["username"];
 	}
 	
+	//ova funkcija kreira post
+	//$this->setNewPost je funkcija uvezena iz Newpost class-a
 	public function createNewPost(){
 		if($this->emptyInput()==false){
 			header("location: ../main.php?error=emptyinput");
@@ -22,6 +24,7 @@ class NewpostContr extends Newpost{
 		$this->setNewPost($this->user_id,$this->title,$this->content,$this->username);
 	}
 	
+	//ova funkcija samo provjerava jeli input postoji
 	private function emptyInput(){
 		$result;
 		if(empty($this->title) || empty($this->content) || empty($this->user_id)){

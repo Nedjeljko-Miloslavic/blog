@@ -15,6 +15,7 @@ class SignupContr extends Signup{
 		$this->email = $email;
 	}
 	
+	//ovdje provjeravamo uvjete prije signupa novog usera. ako sve štima on se provodi
 	public function signUpUser(){
 		if($this->emptyInput()==false){
 			header("location: ../index.php?error=emptyinput");
@@ -40,6 +41,7 @@ class SignupContr extends Signup{
 		
 	}
 	
+	//ove funkcije se tiču uvjeta koji trebaju biti zadovoljeni da bi se signup novog usera izvršio
 	public function emptyInput(){
 		$result;
 		if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)){
@@ -67,6 +69,7 @@ class SignupContr extends Signup{
 		}
 		return $result;
 	}
+	//password i repeat_password se trebaju podudarati
 	public function pwdMatch(){
 		$result;
 		if($this->pwd !== $this->pwdRepeat){
@@ -78,6 +81,7 @@ class SignupContr extends Signup{
 	}
 	public function uidTakenCheck(){
 		$result;
+		//$this->checkUser je uvezeno iz Signup class-a
 		if($this->checkUser($this->uid, $this->email)){
 			$result = false;
 		}else{

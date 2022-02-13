@@ -1,8 +1,9 @@
 <?php
 
 class BlogsDisplay extends Dbh{
+	//funkcija koja vraća sve postove
 	public function findBlogs(){
-		$stmt = $this->connect()->prepare("SELECT * FROM posts;");
+		$stmt = $this->connect()->prepare("SELECT * FROM posts ORDER BY timestamp;");
 		if(!$stmt->execute()){
 			$stmt = null;
 			return [];

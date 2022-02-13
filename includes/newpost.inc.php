@@ -1,4 +1,6 @@
 <?php
+
+//ovaj file nam služi za kreiranje novih postova
 session_start();
 if(isset($_POST["submit"])){
 	$title = $_POST["title"];

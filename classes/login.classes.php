@@ -1,6 +1,8 @@
 <?php
 
 class Login extends Dbh{
+	
+	//provjerava se poklapanje passworda i emaila/username-a te ako su podaci ispravni ulogira se user te se postavlja SESSION
 	protected function getUser($uid,$pwd){
 		$stmt = $this->connect()->prepare("SELECT password FROM users WHERE username = ? OR email = ?;");
 	

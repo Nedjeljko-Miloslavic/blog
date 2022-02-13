@@ -1,12 +1,7 @@
 <?php
 
 include "../classes/dbh.classes.php";
-$dbh = new Dbh();
-class Like extends Dbh{
-	public function get(){
-		var_dump($this->connect());
-	}
-	
-}
+include "../classes/like.classes.php";
 $like = new Like();
-$like->get();
+$state = $like->setLike($_GET["user_id"],$_GET["post_id"]);
+header("location: ../main.php");

@@ -1,11 +1,13 @@
 <?php
 
 class Dbh {
+	//ove  varijable treba konfigurirati po vlastitim postavkama
 	private $host = "localhost";
 	private $user = "root";
 	private $pwd = "123qweasd";
 	private $dbName = "blogs";
 	
+	//ova funkcija vraća PDO element
 	private function connect(){
 		$dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName;
 		$pdo = new PDO($dsn,$this->user, $this->pwd);

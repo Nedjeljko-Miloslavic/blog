@@ -9,6 +9,8 @@ class LoginContr extends Login{
 		$this->pwd = $pwd;
 	}
 	
+	//ako su oba inputa unesena ova funkcija će pokušati ulogirati usera
+	//$this->getUser je uvezena funkcija iz Login classa
 	public function loginUser(){
 		if($this->emptyInput()==false){
 			header("location: ../index.php?error=emptyinput");

@@ -50,6 +50,7 @@ header{
 	width:100%;	
 	margin-bottom:20px;
 }
+
 .postContainer h1{
 	text-align:center;
 }
@@ -65,12 +66,26 @@ header{
 	align-items:center;
 	margin-top:30px;
 	padding-bottom:20px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.postContainer .post .del{
+	width:100%;
+}
+.postContainer .post .del a{
+	background:rgb(100,100,100);
+	text-decoration:none;
+	padding:5px 10px;
+	border-radius:8px;
+	box-shadow:0 0 4px 1px black;
+	color:white;
+	float:right;
 }
 .postContainer h2{
-	margin-top:20px;
+	margin-top:0px;
 }
 .postContainer .content{
-	padding:30px;
+	padding-top:30px;
 	text-align:justify;
 }
 .postContainer .interactions{
@@ -85,16 +100,82 @@ header{
 	color:black;
 	border-radius:10px;
 }
+.postContainer .interactions .liked{
+	background:blue;
+	color:white;
+	font-weight:600;
+}
 .postContainer .interactions span{
 	margin-left:10px;
 }
-
-
+.postContainer .interactions form{
+	flex-direction:row;
+	width:100%;
+	background:none;
+	box-shadow:none;
+}
+.postContainer .interactions form input{
+	box-shadow:0 0 4px 1px black;
+}
+.postContainer .interactions form button{
+	margin-left:20px;
+	border-radius:5px;
+	padding:10px 10px;
+	box-shadow:0 0 4px 1px black;
+	width:150px;
+	border:0;
+	cursor:pointer;
+}
+.postContainer .comments{
+	width:100%;
+}
+.postContainer .comments h2{
+	margin-bottom:20px;
+}
+.postContainer .comment{
+	margin-bottom:20px;
+	box-shadow:black 0 0 4px 1px;
+	padding:5px 10px;
+	border-radius:7px;
+	display:flex;
+}
+.postContainer .comment div{
+	width:88%;
+	
+}
+.postContainer .comment .delete{
+	width:12%;
+	
+}
+.postContainer .comment .delete a{
+	padding:5px 10px;
+	border:0;
+	box-shadow:0 0 4px 1px black;
+	border-radius:5px;
+	float:right;
+	cursor:pointer;
+	
+	text-decoration:none;
+	background:white;
+	color:black;
+}
+.postContainer .comment_user{
+	font-weight:600;
+}
+.postContainer .comment_content{}
 
 
 
 .newPost{
 	width:30%;
+}
+@media only screen and (max-width:1000px) {
+	.postContainer{
+		width:700px;
+	}
+	.newPost{
+		width:210px;
+	}
 }
 .newPost h2{
 	text-align:center;
